@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Document</title>
+  </head>
+  <body class="container mx-auto">
+    <div class="text-white py-16">
+      <div class="table-header">
+        <h1 class="font-semibold text-3xl">CLIENT FINDER</h1>
+        <p class="text-base mt-3">
+          Smart and advance search system for any business type
+        </p>
+      </div>
+
+      <div class="flex justify-start items-start mt-12 border-b">
+        <p>
+          <a
+            href="#"
+            class="active:text-blue-600 active:border-b-4 border-blue-600"
+            >Client Finder</a
+          >
+        </p>
+        <p>
+          <a href="#" class="pl-20">Previous search</a>
+        </p>
+      </div>
+
+      <div class="main-cards grid lg:grid-cols-4 sm:grid-cols-2 gap-5 mt-5">
+        <div class="card flex flex-col justify-around p-6 rounded gradient-1">
+          <div class="card-inner flex items-center justify-between">
+            <h5>Remaining today</h5>
+            <span><img src="assets/icon 3 2.svg" alt="" /></span>
+          </div>
+          <h1>300</h1>
+        </div>
+
+        <!-- card2 -->
+        <div class="card flex flex-col justify-around p-6 rounded gradient-2">
+          <div class="card-inner flex items-center justify-between">
+            <h5>Searches used today</h5>
+            <span><img src="assets/icon 2 2.svg" alt="" /></span>
+          </div>
+          <h1>12</h1>
+        </div>
+
+        <!-- card3 -->
+        <div class="card flex flex-col justify-around p-6 rounded gradient-3">
+          <div class="card-inner flex items-center justify-between">
+            <h5>Daily search limit</h5>
+            <span
+              ><img
+                src="assets/61f15296695f17610b51d4f1_services logo 1 1 1 (1).svg"
+                alt=""
+            /></span>
+          </div>
+          <h1>40</h1>
+        </div>
+      </div>
+
+      <div class="gradient-4 mt-20 px-10 py-7">
+        <div class="table-header">
+          <h1 class="font-semibold text-3xl">SEARCH FOR CLIENT</h1>
+          <p class="text-base mt-3">
+            you can either choose a keyword from the lists or enter your own
+            keyword. The system is optimized for the prefilled keyword, but will
+            work with any
+          </p>
+        </div>
+
+        <div class="xl:flex gap-20 mt-5">
+          <div>
+            <span class="flex items-center">
+              <img src="assets/Keyword (1).svg" alt="" />
+              <label for="search">Location</label>
+            </span>
+
+            <input
+              type="search"
+              class="bg-colorss bg-transparent md:px-40"
+              id="search"
+            />
+          </div>
+
+          <div>
+            <span class="flex items-center">
+              <img src="assets/Keyword (1).svg" alt="" />
+              <label for="search">Keyword</label>
+            </span>
+
+            <input
+              type="search"
+              class="bg-colorss bg-transparent md:px-40"
+              id="search"
+            />
+          </div>
+
+          <!-- <div>
+            <span class="flex items-center">
+              <img src="assets/Keyword.svg" alt="" />
+              <label for="search" class="block pb-5">Location</label>
+            </span>
+
+            <input
+              type="search"
+              class="bg-colorss bg-transparent px-40"
+              id="search"
+            />
+          </div> -->
+        </div>
+
+        <div>
+          <button
+            class="bg-transparent pl-2 pr-6 py-1 mt-7 rounded bg-slate-500"
+          >
+            <a href="#">Filters</a>
+          </button>
+        </div>
+
+        <div>
+          <button class="gradient px-14 py-1.5 rounded-md mt-10 text-base">
+            <a href="#">Get clients</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="gradient-4 mt-10 px-10 py-7">
+        <div class="flex justify-between mb-10">
+          <h1 class="font-semibold text-3xl">RECENT SEARCHES</h1>
+          <button class="gradient sm:px-5 px=2 py-1 sm:py-1.5 rounded-md">
+            <a href="#">View all</a>
+          </button>
+        </div>
+
+        <div class="table-section hidden sm:block">
+          <table class="w-full md:overflow-x-scroll">
+            <thead class="border-b">
+              <tr>
+                <th class="tracking-wide text-left pb-3">Search</th>
+                <th class="tracking-wide text-left pb-3">Date</th>
+                <th class="tracking-wide text-left pb-3">Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="pb-3 pt-5 whitespace-nowrap">Web design</td>
+                <td class="pb-3 pt-5 whitespace-nowrap">2 days ago</td>
+                <td class="pb-3 pt-5 whitespace-nowrap">
+                  <img
+                    src="assets/United Kingdom.svg"
+                    class="inline pr-2"
+                    alt=""
+                  />United Kingdom
+                </td>
+                <td class="pb-3 pt-5 whitespace-nowrap">
+                  <button class="gradient px-5 py-1.5 rounded-md">
+                    <a href="#">View all</a>
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="pb-3 whitespace-nowrap">Graphic design</td>
+                <td class="pb-3 whitespace-nowrap">2 days ago</td>
+                <td class="pb-3 whitespace-nowrap">
+                  <img
+                    src="assets/United Kingdom.svg"
+                    class="inline pr-2"
+                    alt=""
+                  />Nigeria
+                </td>
+                <td class="pb-3 whitespace-nowrap">
+                  <button class="gradient px-5 py-1.5 rounded-md">
+                    <a href="#">View all</a>
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="pb-3 whitespace-nowrap">Web development</td>
+                <td class="pb-3 whitespace-nowrap">2 days ago</td>
+                <td class="pb-3 whitespace-nowrap">
+                  <img
+                    src="assets/United Kingdom.svg"
+                    class="inline pr-2"
+                    alt=""
+                  />Ukraine
+                </td>
+                <td class="pb-3 whitespace-nowrap">
+                  <button class="gradient px-5 py-1.5 rounded-md">
+                    <a href="#">View all</a>
+                  </button>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="pb-3 whitespace-nowrap">Affiliate marketing</td>
+                <td class="pb-3 whitespace-nowrap">2 days ago</td>
+                <td class="pb-3 whitespace-nowrap">
+                  <img
+                    src="assets/United Kingdom.svg"
+                    class="inline pr-2"
+                    alt=""
+                  />USA
+                </td>
+                <td class="pb-3 whitespace-nowrap">
+                  <button class="gradient px-5 py-1.5 rounded-md">
+                    <a href="#">View all</a>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 sm:hidden">
+          <div class="space-y-4">
+            <div class="flex items-center justify-center space-x-5 text-sm">
+              <div>Web design</div>
+              <div>2 days ago</div>
+              <div>
+                <img
+                  src="assets/United Kingdom.svg"
+                  class="inline pr-2"
+                  alt=""
+                />United Kingdom
+              </div>
+            </div>
+            <div>
+              <button class="gradient px-5 py-1.5 mt-3 rounded-md">
+                <a href="#">View all</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-center justify-center space-x-5 text-sm">
+              <div>Graphic design</div>
+              <div>2 days ago</div>
+              <div>
+                <img
+                  src="assets/United Kingdom.svg"
+                  class="inline pr-2"
+                  alt=""
+                />Nigeria
+              </div>
+            </div>
+            <div>
+              <button class="gradient px-5 py-1.5 mt-3 rounded-md">
+                <a href="#">View all</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-center justify-center space-x-5 text-sm">
+              <div>Web development</div>
+              <div>2 days ago</div>
+              <div>
+                <img
+                  src="assets/United Kingdom.svg"
+                  class="inline pr-2"
+                  alt=""
+                />Ukraine
+              </div>
+            </div>
+            <div>
+              <button class="gradient px-5 py-1.5 mt-3 rounded-md">
+                <a href="#">View all</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-center justify-center space-x-5 text-sm">
+              <div>Web development</div>
+              <div>2 days ago</div>
+              <div>
+                <img
+                  src="assets/United Kingdom.svg"
+                  class="inline pr-2"
+                  alt=""
+                />Ukraine
+              </div>
+            </div>
+            <div>
+              <button class="gradient px-5 py-1.5 mt-3 rounded-md">
+                <a href="#">View all</a>
+              </button>
+            </div>
+          </div>
+
+          <!-- <div class="space-y-4">
+            <div class="flex items-center justify-center space-x-5 text-sm">
+              <div>Affiliate marketing</div>
+              <div>2 days ago</div>
+              <div>
+                <img
+                  src="assets/United Kingdom.svg"
+                  class="inline pr-2"
+                  alt=""
+                />USA
+              </div>
+            
+            <div>
+              <button class="gradient px-5 py-1.5 mt-3 rounded-md">
+                <a href="#">View all</a>
+              </button>
+            </div>
+           -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
