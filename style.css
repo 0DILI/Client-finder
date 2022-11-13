@@ -67,11 +67,19 @@ body {
   border-radius: 8px;
 }
 
-.bg-colorss {
-  background-color: #0b1a26;
+.gradient-5 {
+  background: linear-gradient(
+      132.28deg,
+      rgba(80, 90, 221, 0.9) 15.23%,
+      rgba(190, 64, 192, 0.9) 130.57%
+    ),
+    radial-gradient(
+      103.05% 491.25% at 40.46% 43.61%,
+      rgba(66, 39, 181, 0.7) 7.29%,
+      rgba(66, 39, 181, 0.133) 49.1%
+    );
 }
 
-.table.section {
-  overflow: auto;
-  height: 650px;
+.bg-colorss {
+  background-color: #0b1a26;
 }
